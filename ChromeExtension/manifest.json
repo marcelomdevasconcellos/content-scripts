@@ -1,16 +1,19 @@
 {
-	"manifest_version": 2,
+  "manifest_version": 3,
 
-	"name": "Content Scripts example",
-	"description": "A simple content_scripts example.",
-	"version": "1.0",
-	"content_scripts": [
-	 {
-		"matches": ["http://news.163.com/*","file://*"],
-		"js": ["popup.js"]
-	 }
-	],
-	"permissions": [
-		"<all_urls>"
-	]  
+  "name": "Content Scripts example",
+  "description": "A simple content_scripts example.",
+  "version": "1.0",
+  "content_scripts": [
+   {
+    "matches": ["https://www.google.com.br/","file://*"],
+    "js": ["popup.js"]
+   }
+  ],
+  "host_permissions": [
+    "https://www.google.com.br/"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ]
 }
